@@ -2,10 +2,7 @@
   <h1>🍿 Agregar películas</h1> 
 
   <div>
-    <label class="icon-label" for="title">
-
-      Título:
-    </label>
+    <label class="icon-label" for="title">Título:</label>
     <input id="title" formControlName="title" type="text" />
     <div *ngIf="title?.invalid && title?.touched">Campo inválido.</div>
   </div>
@@ -16,12 +13,12 @@
     <div *ngIf="year?.invalid && year?.touched">Campo inválido.</div>
   </div>
   
-  <div>
+  <div class="tooltip-container">
     <label for="imageUrl">URL de la imagen:</label>
     <input id="imageUrl" formControlName="imageUrl" type="text" />
+    <span class="tooltip-text">Ingresa un enlace a una imagen válida (ej: https://example.com/image.jpg)</span>
     <div *ngIf="movieForm.get('imageUrl')?.invalid && movieForm.get('imageUrl')?.touched">Campo inválido.</div>
   </div>
-
 
   <div>
     <label for="description">Descripción:</label>
