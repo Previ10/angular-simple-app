@@ -1,0 +1,33 @@
+<form [formGroup]="movieForm" (ngSubmit)="agregarPelicula()">
+  <h1>🍿 Agregar películas</h1> 
+
+  <div>
+    <label class="icon-label" for="title">
+
+      Título:
+    </label>
+    <input id="title" formControlName="title" type="text" />
+    <div *ngIf="title?.invalid && title?.touched">Campo inválido.</div>
+  </div>
+
+  <div>
+    <label for="year">Año:</label>
+    <input id="year" formControlName="year" type="number" />
+    <div *ngIf="year?.invalid && year?.touched">Campo inválido.</div>
+  </div>
+  
+  <div>
+    <label for="imageUrl">URL de la imagen:</label>
+    <input id="imageUrl" formControlName="imageUrl" type="text" />
+    <div *ngIf="movieForm.get('imageUrl')?.invalid && movieForm.get('imageUrl')?.touched">Campo inválido.</div>
+  </div>
+
+
+  <div>
+    <label for="description">Descripción:</label>
+    <textarea id="description" formControlName="description"></textarea>
+    <div *ngIf="description?.invalid && description?.touched">Campo inválido.</div>
+  </div>
+
+  <button type="submit" [disabled]="movieForm.invalid">Agregar película</button>
+</form>

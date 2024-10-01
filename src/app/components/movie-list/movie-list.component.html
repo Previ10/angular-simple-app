@@ -1,0 +1,10 @@
+<div class="peliculas-container">
+  <div *ngFor="let pelicula of peliculas; let i = index">
+    <app-movie-card 
+      [pelicula]="pelicula" 
+      [index]="i" 
+      (toggleFavorita)="toggleFavorita($event)"
+      (deleteMovie)="eliminarPelicula($event)">
+    </app-movie-card>
+  </div>
+</div>
