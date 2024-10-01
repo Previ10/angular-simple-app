@@ -8,6 +8,7 @@
 .pelicula-card {
   flex: 1 1 calc(33.33% - 40px);
   max-width: 300px; 
+  background-color: #e61c1c;
   min-width: 250px; 
   border: 1px solid black;
   border-radius: 10px;
