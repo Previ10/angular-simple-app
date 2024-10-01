@@ -10,7 +10,7 @@
   max-width: 300px; 
   background-color: #e61c1c;
   min-width: 250px; 
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
@@ -23,8 +23,9 @@
 }
 
 .pelicula-card.favorita {
-  background-color: rgb(26, 115, 192);
-  border-color: rgb(26, 115, 192);
+  background-color: #28a745;
+  color: white;
+  border-color: white;;
   transform: scale(1.05);
 }
 
