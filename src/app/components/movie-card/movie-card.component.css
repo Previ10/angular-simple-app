@@ -45,7 +45,7 @@
   display: block;
   width: 100%; 
   padding: 10px;
-  margin-top: auto; /* Empuja el botón hacia el final */
+  margin-top: auto;
   border: none;
   background-color: #007bff;
   color: white;

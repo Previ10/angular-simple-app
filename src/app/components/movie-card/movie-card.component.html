@@ -1,12 +1,15 @@
 <div [ngClass]="{ favorita: pelicula.isFavorite }" class="pelicula-card">
   <h2>{{ pelicula.title }}</h2>
   <p>{{ pelicula.description }}</p>
-  <img [src]="pelicula.imageUrl" alt="{{ pelicula.title }}" />
+  <img 
+    [src]="pelicula.imageUrl" 
+    alt="{{ pelicula.title }}" 
+    (error)="onImageError()"
+  />
   <button (click)="onToggleFavorita()">
     {{ pelicula.isFavorite ? 'Quitar de favoritas' : 'Agregar a favoritas' }}
   </button>
   <button (click)="onDeleteMovie()">
- 'Eliminar'
+    'Eliminar'
   </button>
-
 </div>
